@@ -798,7 +798,7 @@ ifdef CONFIG_KCOV
 endif
 
 # Eureka Kernel Versioning
-REV := $(shell grep -Po 'Eureka R\K[^*]+' ../kernel_zip/anykernel/version)
+REV ?= 15.0
 EUREKA_VERSION := $(call cc-option, -DKERNEL_VERSION=$(REV))
 export EUREKA_VERSION
 
